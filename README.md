@@ -37,6 +37,32 @@ You can run your application in dev mode that enables live coding using:
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
 
+## API Documentation with Swagger UI
+
+This project includes Swagger UI for API documentation. Once the application is running, you can access the Swagger UI at:
+
+```
+http://localhost:8080/swagger-ui/
+```
+
+The OpenAPI specification is available at:
+
+```
+http://localhost:8080/openapi
+```
+
+The API provides endpoints for managing films and actors:
+
+- Films API: `/api/films`
+  - GET `/api/films` - Get all films
+  - GET `/api/films/{id}` - Get film by ID
+  - GET `/api/films/hello` - Simple hello endpoint
+
+- Actors API: `/api/actors`
+  - GET `/api/actors` - Get all actors
+  - GET `/api/actors/{id}` - Get actor by ID
+  - GET `/api/actors/{id}/films` - Get films by actor ID
+
 ## Packaging and running the application
 
 The application can be packaged using:

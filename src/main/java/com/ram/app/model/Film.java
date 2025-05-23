@@ -19,7 +19,7 @@ public class Film {
     private String title;
 
     @Lob
-    @Column(name = "description")
+    @Column(name = "description", columnDefinition = "tinytext")
     private String description;
 
     @Column(name = "release_year")
@@ -46,7 +46,7 @@ public class Film {
     private String rating;
 
     @Lob
-    @Column(name = "special_features", columnDefinition = "set('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes'")
+    @Column(name = "special_features", columnDefinition = "set('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes')")
     private String specialFeatures;
 
     @ColumnDefault("CURRENT_TIMESTAMP")
