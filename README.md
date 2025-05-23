@@ -4,6 +4,29 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
 
+## Database Setup
+
+This project uses the MySQL Sakila sample database. You can start the database using Docker Compose:
+
+```shell script
+docker-compose up -d
+```
+
+> **_NOTE:_** The MySQL Sakila image is configured to run on linux/amd64 platform. If you're using an ARM-based system (like Apple Silicon Mac), Docker will automatically use emulation to run the container.
+
+This will start a MySQL container with the Sakila database pre-loaded. The database will be accessible at:
+- Host: localhost
+- Port: 3306
+- Database: sakila
+- Username: sakila
+- Password: sakila
+
+To stop the database:
+
+```shell script
+docker-compose down
+```
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
